@@ -9,7 +9,7 @@ header {
   grid-column: 1 / -1;
   grid-row: 1 / 2;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   background-color: #6539a4; }
 
 nav {
@@ -28,12 +28,6 @@ main {
 header h2,
 header h3 {
   color: black;
-}
-
-header  {
-  display: flex;
-  justify-content: space-around;
-
 }
 
 .top-right {
