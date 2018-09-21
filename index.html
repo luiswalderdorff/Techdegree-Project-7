@@ -13,8 +13,8 @@
         <h2>YourApp<sup>tm</sup></h2>
         <div class="top-right">
           <img src="icons/icon-bell.svg" class="bell" />
-          <img class"avatar" />
-          <h3 class"name">Name</h3>
+          <img class="avatar" />
+          <h3 class="name">Name</h3>
         </div>
       </header>
 
@@ -26,12 +26,22 @@
       </nav>
 
       <main>
+        <div class="top">
+          <div class="dash-search">
+            <h3>Dashboard</h3>
+            <input type="text" placeholder="Search" id="searchbar">
+          </div>
+          <div class="alert">
+            <p>Alert!<p>
+            <button class="remove">x</button>
+          </div>
+        </div>
 
-        <h2>Dashboard</h2>
+        <div class="traffic">
+          <h3>Traffic</h3>
+          <canvas id="myChart" width="400" height="400"></canvas>
+        </div>
 
-        <div class="searchbar"></div>
-
-        <div class="traffic"></div>
 
         <div class="daily-traffic"></div>
 
@@ -53,5 +63,8 @@
 
       </main>
     </div>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/chart.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
