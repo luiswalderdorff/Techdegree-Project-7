@@ -4,11 +4,13 @@ $( ".remove").click(function() {
   $(".alert").hide();
 })
 
-// Chart
+// Chart Traffic
 
-var ctx = $("#myChart");
+var traffic = $("#chartTraffic");
 
-var myChart = new Chart(ctx, {
+
+
+var chartTraffic = new Chart(traffic, {
     type: 'line',
     data: {
         labels: ["16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3", "4-10", "11-17", "18-24", "25-31"],
@@ -21,6 +23,10 @@ var myChart = new Chart(ctx, {
         }]
     },
     options: {
+      layout: {
+
+      },
+      responsive:true,
       maintainAspectRatio: false,
       elements: {
         line: {
@@ -36,3 +42,68 @@ var myChart = new Chart(ctx, {
         }
     }
 });
+
+// Chart Daily
+
+var daily = $("#chartDaily");
+
+var chartTraffic = new Chart(daily, {
+    type: 'bar',
+    data: {
+        labels: ["S", "M", "T", "W", "T", "F", "S"],
+        datasets: [{
+            label: "number of visitors",
+            data: [75, 125, 100, 150, 200, 150, 175],
+            borderColor: "#6539a4",
+            backgroundColor: "#6539a4",
+            borderWidth: 1
+        }]
+    },
+    options: {
+      layout: {
+        padding: {
+          top: 60,
+        },
+      },
+      maintainAspectRatio: false,
+      elements: {
+        line: {
+            tension: 0
+        }
+    },
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        }
+    }
+});
+
+// Chart Mobile
+
+var mobile = $("#chartMobile");
+var chartTraffic = new Chart(mobile, {
+    type: 'doughnut',
+    data: {
+        datasets: [{
+            data: [15, 10, 75],
+            backgroundColor: ["red", "blue", "green"],
+            borderWidth: 0
+        }],
+        labels: ["Phones", "Tablets", "Desktop"],
+    },
+    options: {
+      layout: {
+        padding: {
+          top: 60,
+        },
+      },
+      maintainAspectRatio: false,
+      legend: {
+        position: "right",
+      }
+        }
+    })
+;
