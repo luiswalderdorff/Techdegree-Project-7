@@ -41,9 +41,11 @@ p {
 
 .container {
   display: grid;
-  grid-template-columns: minmax(60px, 1fr) 2fr 2fr;
+  grid-template-columns: minmax(50px, 1fr) 4fr;
   grid-template-rows: 45px;
-  grid-auto-rows: minmax(150px, auto); }
+  grid-auto-rows: minmax(150px, auto);
+  width: 100%;
+}
 
 header {
   grid-column: 1 / -1;
@@ -66,26 +68,39 @@ nav {
 main {
   display: block;
 
+  width: 100%;
+
 }
+
+main:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 
 .top {
   grid-column: 1 / -1;
 }
 
 .traffic {
+  width: 250px;
   grid-column: 1 / -1;
 }
 
 .daily-traffic {
+  width: 250px;
   grid-column: 1 / 2;
 }
 
 
 .mobile-users {
+  width: 250px;
   grid-column: 2 / 3;
 }
 
 .social-stats {
+  width: 250px;
   grid-column: 1 / -1;
 }
 
@@ -520,6 +535,23 @@ input:focus{
 
   .member h3 {
     width: 85%;
+  }
+
+  .traffic {
+    width: auto;
+  }
+
+  .daily-traffic {
+    width: auto;
+  }
+
+
+  .mobile-users {
+    width: auto;
+  }
+
+  .social-stats {
+    width: auto;
   }
 }
 

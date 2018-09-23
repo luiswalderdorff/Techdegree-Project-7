@@ -1,23 +1,22 @@
 // Bell notifications
 $( ".bell").click(function() {
   $(".alert").clone().appendTo(".top").attr("class", "alert-2").css("display", "flex");
-  $("alert-2 .remove").attr("class", "remove-2");
+  $(".alert-2 .remove").attr("class", "remove-2");
   $(".alert").clone().appendTo(".top").attr("class", "alert-3").css("display", "flex");
-  $("alert-3 .remove").attr("class", "remove-3");
+  $(".alert-3 .remove").attr("class", "remove-3");
+  $( ".remove-2").click(function() {
+    $(".alert-2").hide();
+  })
+
+  $( ".remove-3").click(function() {
+    $(".alert-3").hide();
+  })
 })
 
 // x remove button
 
 $( ".remove").click(function() {
   $(".alert").hide();
-})
-
-$( ".remove-2").click(function() {
-  $(".alert-2").hide();
-})
-
-$( ".remove-3").click(function() {
-  $(".alert-3").hide();
 })
 
 
@@ -83,6 +82,7 @@ var chartTraffic = new Chart(daily, {
         },
       },
       maintainAspectRatio: false,
+      responsive: true,
       elements: {
         line: {
             tension: 0
@@ -118,6 +118,7 @@ var chartTraffic = new Chart(mobile, {
         },
       },
       maintainAspectRatio: false,
+      responsive: true,
       legend: {
         position: "bottom",
       }
