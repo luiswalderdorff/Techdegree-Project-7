@@ -1,8 +1,25 @@
+// Bell notifications
+$( ".bell").click(function() {
+  $(".alert").clone().appendTo(".top").attr("class", "alert-2").css("display", "flex");
+  $("alert-2 .remove").attr("class", "remove-2");
+  $(".alert").clone().appendTo(".top").attr("class", "alert-3").css("display", "flex");
+  $("alert-3 .remove").attr("class", "remove-3");
+})
+
 // x remove button
 
 $( ".remove").click(function() {
   $(".alert").hide();
 })
+
+$( ".remove-2").click(function() {
+  $(".alert-2").hide();
+})
+
+$( ".remove-3").click(function() {
+  $(".alert-3").hide();
+})
+
 
 // Chart Traffic
 

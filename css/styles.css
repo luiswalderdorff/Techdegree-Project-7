@@ -41,7 +41,7 @@ p {
 
 .container {
   display: grid;
-  grid-template-columns: 1fr 10fr 10fr;
+  grid-template-columns: minmax(60px, 1fr) 2fr 2fr;
   grid-template-rows: 45px;
   grid-auto-rows: minmax(150px, auto); }
 
@@ -64,12 +64,8 @@ nav {
 /* Second Grid */
 
 main {
-  grid-column: 2 / -1;
-  grid-row: 2 / -1;
-  display: grid;
-  grid-row-gap: 10px;
-  grid-template-columns: repeat(auto-fit, 50%);
-  grid-template-rows: auto;
+  display: block;
+
 }
 
 .top {
@@ -173,10 +169,13 @@ header * {
 
 /* Main Grid row 1 */
 
-.alert {
+.alert,
+.alert-2,
+.alert-3 {
   background-color: #361f58;
   width: 90%;
   margin-left: 10px;
+  margin-bottom: 10px;
   height: 30px;
   margin: auto;
   display: flex;
@@ -184,17 +183,25 @@ header * {
   align-items: center;
 }
 
-.alert p {
+
+.alert p,
+.alert-2 p,
+.alert-3 p {
   color: white;
   font-size: 0.9em;
 }
 
-.alert button {
+.alert button
+.alert-2 button,
+.alert-3 button {
   font-size: 0.9em;
 }
 
-.remove {
+.remove,
+.remove-2,
+.remove-3 {
   border: none;
+  display: inline-block;
   background-color: inherit;
   color: white;
   align-self: flex-start;
@@ -234,28 +241,33 @@ header * {
 }
 
 .social-box {
-  display: grid;
+  display: block;
+  /* display: grid;
   grid-template-columns: 1fr 2fr;
   grid-template-rows: 1fr 1fr;
   flex-shrink: 200px;
   flex-grow: 1;
-  flex-basis: 30%;
-  height: 100px;
+  flex-basis: 30%; */
+  height: 100%;
   border: solid 1px grey;
   padding: 10px;
   margin: 10px;
+  width: 90%;
 }
 
 .social-box svg {
+  display: inline-block;
   float: left;
-  height: 100%;
+  height: 80px;
   grid-column: 1 / 2;
   grid-row: 1 / -1;
   margin: 0 auto;
   border: 0px solid;
   border-radius: 50%;
-  width: 100%;
-  padding: 12px;
+  /* width: 100%; */
+  width: 80px;
+  padding: 15px;
+  background-color: #6539a4;
 }
 
 .social-box h3 {
@@ -275,9 +287,10 @@ header * {
 }
 
 .social-stats {
-  display: grid;
+  /* display: grid; */
   grid-template-rows: 20px 100px;
-  align-content: center;
+  /* align-content: center; */
+  text-align: center;
 }
 
 .social-boxes {
@@ -332,6 +345,7 @@ input:focus{
   margin-bottom: 12px;
   display: block;
   margin: 0 auto;
+  text-align: center;
 }
 
 .message-user h3 {
@@ -372,6 +386,7 @@ input:focus{
 
 .settings h3 {
   padding-left: 0;
+  text-align: center;
 }
 
 .settings p {
@@ -382,7 +397,9 @@ input:focus{
 .switch {
   display: flex;
   justify-content: space-between;
-  width: 50%;
+  /* width: 50%; */
+  width: 90%;
+  margin: 0 auto;
 }
 
 .onoffswitch {
@@ -415,6 +432,12 @@ input:focus{
 .settings,
 .message-user {
   margin-bottom: 25px;
+}
+
+.settings select {
+  width: 90%;
+  margin: 10px auto;
+  border-radius: 10px;
 }
 
 /* On off switch */
@@ -473,4 +496,35 @@ input:focus{
 }
 .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
     right: 0px;
+}
+
+@media only screen and (min-width: 768px) {
+  main {
+    grid-column: 2 / -1;
+    grid-row: 2 / -1;
+    display: grid;
+    grid-row-gap: 10px;
+    grid-template-columns: repeat(auto-fit, 50%);
+    grid-template-rows: auto;
+  }
+  .container {
+    grid-template-columns: 2fr 10fr 10fr;
+  }
+  .social-box {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 1fr;
+    flex-grow: 1;
+    flex-basis: 30%;
+  }
+
+  .member h3 {
+    width: 85%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .container {
+    grid-template-columns: 1fr 10fr 10fr;
+  }
 }
