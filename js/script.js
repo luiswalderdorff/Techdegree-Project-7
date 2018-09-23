@@ -102,7 +102,7 @@ var chartTraffic = new Chart(mobile, {
       },
       maintainAspectRatio: false,
       legend: {
-        position: "right",
+        position: "bottom",
       }
         }
     })
