@@ -70,7 +70,6 @@ main {
   grid-row-gap: 10px;
   grid-template-columns: repeat(auto-fit, 50%);
   grid-template-rows: auto;
-  border: grey 1px solid;
 }
 
 .top {
@@ -108,7 +107,7 @@ main {
   grid-column: 1 / 2;
 }
 
-.setting {
+.settings {
   grid-column: 2 / 3;
 }
 
@@ -317,11 +316,112 @@ header * {
   float: right;
 }
 
+
+/* Message user */
+
+input {
+  border: 1px solid grey;
+}
+
+input:focus{
+  border-radius: 10px;
+}
+
+.message-user {
+  margin-top: 12px;
+  margin-bottom: 12px;
+  display: block;
+  margin: 0 auto;
+}
+
+.message-user h3 {
+  padding-left: 0;
+}
+
+#user-search {
+  margin-top: 10px;
+  width: 90%;
+  border-radius: 5px;
+  height: 25px;
+}
+
+#user-message {
+  margin-top: 10px;
+  width: 90%;
+  height: 100px;
+  border-radius: 5px;
+}
+
+#user-send {
+  margin-top: 10px;
+  width: 90%;
+  border-radius: 5px;
+  border: none;
+  background-color: #6539a4;
+  color: white;
+  height: 30px;
+}
+
+/* Settings */
+
+.settings {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.settings h3 {
+  padding-left: 0;
+}
+
+.settings p {
+  font-size: 14px;
+  text-align: center;
+}
+
+.switch {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+}
+
+.onoffswitch {
+  padding-left: 10px;
+  margin-top: 12px;
+  margin-bottom: 14px;
+}
+
+.settings button {
+  margin-top: 20px;
+  width: 40%;
+  display: inline-block;
+  border-radius: 5px;
+  border: none;
+  background-color: #6539a4;
+  color: white;
+  height: 30px;
+  align-self: flex-end;
+}
+
+#cancel {
+  background-color: grey;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.settings,
+.message-user {
+  margin-bottom: 25px;
+}
+
 /* On off switch */
 
 .onoffswitch {
     position: relative;
-    width: 90px;
+    width: 60px;
     -webkit-user-select:none;
     -moz-user-select:none;
     -ms-user-select: none;
@@ -333,7 +433,6 @@ header * {
     display: block;
     overflow: hidden;
     cursor: pointer;
-    border: 2px solid #999999;
     border-radius: 20px;
 }
 .onoffswitch-inner {
@@ -346,9 +445,9 @@ header * {
     display: block;
     float: left;
     width: 50%;
-    height: 30px;
+    height: 20px;
     padding: 0;
-    line-height: 30px;
+    line-height: 20px;
     font-size: 14px;
     color: white;
     font-family: Trebuchet, Arial, sans-serif;
@@ -368,19 +467,7 @@ header * {
     color: #999999;
     text-align: right;
 }
-.onoffswitch-switch {
-    display: block;
-    width: 18px;
-    margin: 6px;
-    background: #FFFFFF;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 56px;
-    border: 2px solid #999999;
-    border-radius: 20px;
-    transition: all 0.3s ease-in 0s;
-}
+
 .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
     margin-left: 0;
 }

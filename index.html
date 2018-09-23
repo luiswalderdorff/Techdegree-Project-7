@@ -166,30 +166,45 @@
             <br />
             <p>1 day ago</p>
         </div>
+      </div>
 
         <div class="message-user">
           <h3>Message User</h3>
           <input type="text" placeholder="Search for User" id="user-search">
-          <input type="text" placeholder="Message for User" id="user-message">
-          <button type="submit">Send</button>
+          <textarea placeholder="Message for User" id="user-message"></textarea>
+          <button type="submit" id="user-send">Send</button>
         </div>
 
-        <!-- <div class="settings">
-          <div class="onoffswitch">
-              <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch-1" checked>
-              <label class="onoffswitch-label" for="myonoffswitch-1">
-                  <span class="onoffswitch-inner"></span>
-                  <span class="onoffswitch-switch"></span>
-              </label>
+        <div class="settings">
+          <h3>Settings</h3>
+          <div class=switch>
+          <p>Send Email Notifications</p>
+            <div class="onoffswitch">
+                <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch-1" checked>
+                <label class="onoffswitch-label" for="myonoffswitch-1">
+                    <span class="onoffswitch-inner"></span>
+                    <span class="onoffswitch-switch"></span>
+                </label>
+            </div>
           </div>
-          <div class="onoffswitch">
+          <div class="switch">
+            <p>Set Profile to Public</p>
+            <div class="onoffswitch">
               <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch-2" checked>
               <label class="onoffswitch-label" for="myonoffswitch-2">
                   <span class="onoffswitch-inner"></span>
                   <span class="onoffswitch-switch"></span>
               </label>
           </div>
-        </div> -->
+          </div>
+          <select>
+            <option>Select Timezone</option>
+          </select>
+          <div class="buttons">
+            <button type="submit" id="save">Save</button>
+            <button type="submit" id="cancel">Cancel</button>
+          </div>
+        </div>
 
       </main>
     </div>
