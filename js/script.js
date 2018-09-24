@@ -317,6 +317,7 @@ $("#save").click( function () {
   localStorage.setItem("timezone", $("#timezone").val());
   localStorage.setItem("check1", document.getElementById("myonoffswitch-1").checked);
   localStorage.setItem("check2", document.getElementById("myonoffswitch-2").checked);
+  alert("Your settings have been saved.")
 });
 
 //First Checkbox
@@ -354,7 +355,7 @@ $('#timezone').val(localStorage.getItem('timezone'));
 $(".bell").click( function () {
   if ($(".dropdown-content").css("display") === "none") {
   $(".dropdown-content").show();
-  $(".alert-notification").hide();  
+  $(".alert-notification").hide();
 } else if ($(".dropdown-content").css("display") === "block") {
   $(".dropdown-content").hide();
 }

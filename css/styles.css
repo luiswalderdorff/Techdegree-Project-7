@@ -416,7 +416,6 @@ header * {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  flex-basis: 1;
 }
 
 /* New members */
