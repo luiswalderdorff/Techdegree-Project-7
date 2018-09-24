@@ -156,6 +156,7 @@ header * {
 
 .avatar {
   margin-left: 10px;
+  margin-right: 30px;
   vertical-align: baseline;
   border-radius: 50%;
   height: 80%;
@@ -168,6 +169,7 @@ header * {
   align-self: center;
   height: 80%;
   white-space: nowrap;
+  display: none;
   }
 
 
@@ -644,6 +646,11 @@ input:focus{
   }
   .name {
     margin-right: 40px;
+    display: block;
+  }
+
+  .avatar {
+    margin-right: 10px;
   }
 }
 
