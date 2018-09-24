@@ -180,7 +180,44 @@ header * {
   border-right: 1px solid #522e84;
   margin-right: 10px;
   padding-right: 10px;
+  height: 100%;
 }
+
+.alert-notification {
+  background-color: green;
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  left: 16px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    height: 80%;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 200%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    height: auto;
+    right: 0;
+    left: 0;
+}
+
+.dropdown-content p {
+    color: black;
+    font-size: 12px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.dropdown-content p:hover {background-color: #ddd}
 
 .bell:hover {
   animation: shake 0.4s forwards;
@@ -615,6 +652,11 @@ input:focus{
   .container {
     grid-template-columns: 2fr 10fr 10fr;
   }
+
+  .dropdown-content {
+    min-width: 400%;
+  }
+
   .social-box {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -660,5 +702,9 @@ input:focus{
 @media only screen and (min-width: 1024px) {
   .container {
     grid-template-columns: 1fr 10fr 10fr;
+  }
+
+  .dropdown-content {
+    min-width: 500%;
   }
 }

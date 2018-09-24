@@ -1,17 +1,17 @@
 // Bell notifications
-$( ".bell").click(function() {
-  $(".alert").clone().appendTo(".top").attr("class", "alert-2").css("display", "flex");
-  $(".alert-2 .remove").attr("class", "remove-2");
-  $(".alert").clone().appendTo(".top").attr("class", "alert-3").css("display", "flex");
-  $(".alert-3 .remove").attr("class", "remove-3");
-  $( ".remove-2").click(function() {
-    $(".alert-2").hide();
-  })
-
-  $( ".remove-3").click(function() {
-    $(".alert-3").hide();
-  })
-})
+// $( ".bell").click(function() {
+//   $(".alert").clone().appendTo(".top").attr("class", "alert-2").css("display", "flex");
+//   $(".alert-2 .remove").attr("class", "remove-2");
+//   $(".alert").clone().appendTo(".top").attr("class", "alert-3").css("display", "flex");
+//   $(".alert-3 .remove").attr("class", "remove-3");
+//   $( ".remove-2").click(function() {
+//     $(".alert-2").hide();
+//   })
+//
+//   $( ".remove-3").click(function() {
+//     $(".alert-3").hide();
+//   })
+// })
 
 // x remove button
 
@@ -345,8 +345,17 @@ if ( localStorage.getItem("check2") === "true") {
 
 document.getElementById("myonoffswitch-2").checked = checkBoolean1;
 
-// Set the value of the dropdownmenue to the one saved during the click to the local Storage
+// Set the value of the dropdownmenu to the one saved during the click to the local Storage
 
 $('#timezone').val(localStorage.getItem('timezone'));
 
-// Why does changing the value make it select that specific option from the select input?
+// Bell notifications
+
+$(".bell").click( function () {
+  if ($(".dropdown-content").css("display") === "none") {
+  $(".dropdown-content").show();
+  $(".alert-notification").hide();  
+} else if ($(".dropdown-content").css("display") === "block") {
+  $(".dropdown-content").hide();
+}
+});
