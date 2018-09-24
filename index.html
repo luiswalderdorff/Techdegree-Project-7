@@ -5,6 +5,7 @@
     <title>Dashboard Web App</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/easy-autocomplete.min.css">
     <link rel="stylesheet" href="css/styles.css">
   </head>
   <body>
@@ -38,9 +39,26 @@
         </div>
 
         <div class="traffic">
-          <h3>Traffic</h3>
-          <div class="wrapper">
-            <canvas id="chartTraffic" width="300px" height="300px"></canvas>
+          <div class="traffic-title">
+            <h3>Traffic</h3>
+            <div class="traffic-buttons">
+              <button type="button" class="traffic-time" id="time-hourly">Hourly</button>
+              <button type="button" class="traffic-time" id="time-daily">Daily</button>
+              <button type="button" class="traffic-time green-background" id="time-weekly">Weekly</button>
+              <button type="button" class="traffic-time" id="time-monthly">Monthly</button>
+            </div>
+          </div>
+          <div class="wrapper-1">
+            <canvas id="chartTraffic-weekly" width="300px" height="300px"></canvas>
+          </div>
+          <div class="wrapper-2">
+            <canvas id="chartTraffic-hourly" width="300px" height="300px"></canvas>
+          </div>
+          <div class="wrapper-3">
+            <canvas id="chartTraffic-daily" width="300px" height="300px"></canvas>
+          </div>
+          <div class="wrapper-4">
+            <canvas id="chartTraffic-monthly" width="300px" height="300px"></canvas>
           </div>
         </div>
 
@@ -170,7 +188,7 @@
 
         <div class="message-user">
           <h3>Message User</h3>
-          <input type="text" placeholder="Search for User" id="user-search">
+          <input type="text" placeholder="Search for User" id="user-search" class"autocomplete">
           <textarea placeholder="Message for User" id="user-message"></textarea>
           <button type="submit" id="user-send">Send</button>
         </div>
@@ -180,7 +198,7 @@
           <div class=switch>
           <p>Send Email Notifications</p>
             <div class="onoffswitch">
-                <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch-1" checked>
+                <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch-1">
                 <label class="onoffswitch-label" for="myonoffswitch-1">
                     <span class="onoffswitch-inner"></span>
                     <span class="onoffswitch-switch"></span>
@@ -190,15 +208,18 @@
           <div class="switch">
             <p>Set Profile to Public</p>
             <div class="onoffswitch">
-              <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch-2" checked>
+              <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch-2">
               <label class="onoffswitch-label" for="myonoffswitch-2">
                   <span class="onoffswitch-inner"></span>
                   <span class="onoffswitch-switch"></span>
               </label>
           </div>
           </div>
-          <select>
+          <select id="timezone">
             <option>Select Timezone</option>
+            <option>Timezone 1</option>
+            <option>Timezone 2</option>
+            <option>Timezone 3</option>
           </select>
           <div class="buttons">
             <button type="submit" id="save">Save</button>
@@ -210,6 +231,7 @@
     </div>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/chart.js"></script>
+    <script src="js/jquery.easy-autocomplete.min.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>

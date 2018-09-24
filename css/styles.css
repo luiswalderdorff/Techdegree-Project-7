@@ -67,9 +67,13 @@ nav {
 
 main {
   display: block;
-
+  text-align: center;
   width: 100%;
 
+}
+
+main > * {
+  margin: 0 auto;
 }
 
 main:after {
@@ -84,23 +88,23 @@ main:after {
 }
 
 .traffic {
-  width: 250px;
+  max-width: 250px;
   grid-column: 1 / -1;
 }
 
 .daily-traffic {
-  width: 250px;
+  max-width: 80%;
   grid-column: 1 / 2;
 }
 
 
 .mobile-users {
-  width: 250px;
+  max-width: 80%;
   grid-column: 2 / 3;
 }
 
 .social-stats {
-  width: 250px;
+  max-width: 80%;
   grid-column: 1 / -1;
 }
 
@@ -245,8 +249,58 @@ header * {
   margin-right: 10px;
 }
 
-.wrapper {
+.traffic-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.traffic-title h3 {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.traffic-time {
+  border: none;
+  border-radius: 10px;
+  background-color: white;
+  padding: 3px 7px;
+}
+
+.traffic-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.traffic-buttons {
+  font-size: 13px;
+}
+
+.green-background {
+  background-color: green;
+  color: white;
+}
+
+.wrapper-1,
+.wrapper-2,
+.wrapper-3,
+.wrapper-4 {
   height: 250px;
+}
+
+.wrapper-2,
+.wrapper-3,
+.wrapper-4 {
+  display: none;
+}
+
+.daily-traffic {
+  margin-top: 30px;
+}
+
+.mobile-users {
+  margin-top: 30px;
 }
 
 /* Main grid social stats row */
@@ -321,6 +375,7 @@ header * {
   height: 40px;
   border-radius: 50%;
   float: left;
+  margin-right: 10px;
 }
 
 .member {
@@ -330,8 +385,8 @@ header * {
 }
 
 .member h3 {
-  display: inline-block;
   margin: 0;
+  text-align: left;
 }
 
 .member p {
@@ -347,6 +402,11 @@ header * {
 
 /* Message user */
 
+.autocomplete {
+  position: relative;
+  display: inline-block;
+}
+
 input {
   border: 1px solid grey;
 }
@@ -361,6 +421,16 @@ input:focus{
   display: block;
   margin: 0 auto;
   text-align: center;
+  width: 100%;
+}
+
+.easy-autocomplete {
+  width: 100% !important;
+}
+
+.easy-autocomplete-container {
+  left: 5%;
+  width: 90%;
 }
 
 .message-user h3 {
@@ -372,6 +442,7 @@ input:focus{
   width: 90%;
   border-radius: 5px;
   height: 25px;
+  /* padding: 0; */
 }
 
 #user-message {
@@ -521,6 +592,11 @@ input:focus{
     grid-row-gap: 10px;
     grid-template-columns: repeat(auto-fit, 50%);
     grid-template-rows: auto;
+    text-align: inherit;
+  }
+
+  main > * {
+    margin: inherit;
   }
   .container {
     grid-template-columns: 2fr 10fr 10fr;
@@ -533,25 +609,29 @@ input:focus{
     flex-basis: 30%;
   }
 
+  .traffic-buttons {
+    flex-direction: row;
+  }
+
   .member h3 {
     width: 85%;
   }
 
   .traffic {
-    width: auto;
+    max-width: 100% ;
   }
 
   .daily-traffic {
-    width: auto;
+    max-width: 100%;
   }
 
 
   .mobile-users {
-    width: auto;
+    max-width: 100%;
   }
 
   .social-stats {
-    width: auto;
+    max-width: 100%;
   }
 }
 
