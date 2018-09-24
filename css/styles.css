@@ -151,16 +151,23 @@ header * {
   flex-basis: 100px;
   padding-top: 5px;
   height: 100%;
+  align-items: center;
+}
+
+.avatar {
+  margin-left: 10px;
+  vertical-align: baseline;
+  border-radius: 50%;
+  height: 80%;
 }
 
 .name {
-  border-left: 1px solid #522e84;
   margin-left: 10px;
   padding-left: 10px;
-  margin-right: 40px;
+  margin-right: 10px;
   align-self: center;
   height: 80%;
-
+  white-space: nowrap;
   }
 
 
@@ -168,6 +175,9 @@ header * {
 .bell {
   align-self: center;
   transform-origin: center;
+  border-right: 1px solid #522e84;
+  margin-right: 10px;
+  padding-right: 10px;
 }
 
 .bell:hover {
@@ -333,7 +343,6 @@ header * {
   margin: 0 auto;
   border: 0px solid;
   border-radius: 50%;
-  /* width: 100%; */
   width: 80px;
   padding: 15px;
   background-color: #6539a4;
@@ -632,6 +641,9 @@ input:focus{
 
   .social-stats {
     max-width: 100%;
+  }
+  .name {
+    margin-right: 40px;
   }
 }
 
